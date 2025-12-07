@@ -49,7 +49,7 @@ Run the cells from **Step 4** through **Step 12** to build the Knowledge Graph a
 **Crucial Step:** The User Interface runs as a separate application script (`app.py`), so it cannot access the variables from Step 2. You must manually inject the keys again here.
 
 1.  Look inside the code block for **Step 13** (under `%%writefile app.py`).
-2.  Find the section marked `# ⚠️ PASTE YOUR REAL KEYS HERE`.
+2.  Find the section marked `# PASTE YOUR KEYS HERE`.
 3.  Paste the following keys from your `Secret Keys.txt` file:
     * `GOOGLE_API_KEY`
     * `NEO4J_URI`
