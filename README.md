@@ -1,11 +1,11 @@
 
-# 🕵️ CitationSleuth: The Fact-Checking RAG System
+# CitationSleuth: The Fact-Checking RAG System
 
 **CitationSleuth** is an advanced Retrieval-Augmented Generation (RAG) system designed to detect and prevent hallucinations in Large Language Models. It employs a "Trust but Verify" architecture, combining Vector Search with Knowledge Graphs to audit AI answers against source documents.
 
 ---
 
-## 📂 Repository Contents
+## Repository Contents
 
 * **`CitationSleuth_final_project.ipynb`**: The complete project pipeline (Ingestion, RAG, Verification, and UI).
 * **`demo-file.pdf`**: The research paper (*SayNav*) used to demonstrate and test the system.
@@ -13,7 +13,7 @@
 
 ---
 
-## ⚡ Execution Guide (Google Colab)
+## Execution Guide (Google Colab)
 
 Follow these steps to set up and run the project.
 
@@ -26,11 +26,11 @@ Navigate to the code cell labeled **Step 2: Imports, Auth, & Model Initializatio
 2.  Copy **ALL** the values (`HF_TOKEN`, `GOOGLE_API_KEY`, `NEO4J_URI`, `NEO4J_PASSWORD`, and `NGROK_TOKEN`).
 3.  Paste them directly into the corresponding variables in the notebook code.
 
-> **ℹ️ Model Selection**: The system is configured to use **`gemini-2.5-flash`** by default for high speed and efficiency.
+> **Model Selection**: The system is configured to use **`gemini-2.5-flash`** by default for high speed and efficiency.
 > * **Quota Limits**: If you encounter a `429 Resource Exhausted` error, it means the free tier quota for this model has been reached.
-> * **Fix**: You can modify the model name in Step 2 to use other variants such as `gemini-1.5-flash` or `gemini-2.5-flash-exp`.
+> * **Fix**: You can generate a new api key and update it in step 2, or modify the model name in Step 2 to use other variants such as `gemini-1.5-flash` or `gemini-2.5-flash-exp` .
 
-> **⚠️ Troubleshooting `HF_TOKEN`**: If you receive a `401 Unauthorized` error, the provided Hugging Face token may have expired. You can generate a free "Read" token at [Hugging Face Settings](https://huggingface.co/settings/tokens) and use that instead.
+> **Troubleshooting `HF_TOKEN`**: If you receive a `401 Unauthorized` error, the provided Hugging Face token may have expired. You can generate a free "Read" token at [Hugging Face Settings](https://huggingface.co/settings/tokens) and use that instead.
 
 ### 3. Upload Demo File (Notebook Step 3)
 Run **Step 3: PDF Ingestion**.
@@ -41,7 +41,7 @@ Run **Step 3: PDF Ingestion**.
 ### 4. Run Verification Logic (Notebook Steps 4-12)
 Run the cells from **Step 4** through **Step 12** to build the Knowledge Graph and run the backend benchmarks.
 
-> **⚠️ Troubleshooting Verification (Step 10)**: If Step 10 fails due to API limits:
+> **Troubleshooting Verification (Step 10)**: If Step 10 fails due to API limits:
 > * Ensure you are using your own personal Google API Key.
 > * Try switching the model in Step 2 (e.g., to `gemini-1.5-flash`).
 
@@ -63,7 +63,7 @@ Run the final step. It will start the Streamlit server using the `NGROK_TOKEN` y
 
 ---
 
-## 🖥️ User Interface Instructions
+## User Interface Instructions
 
 Once the app is open in your browser, follow this workflow:
 
@@ -86,7 +86,7 @@ Once the app is open in your browser, follow this workflow:
 
 ---
 
-## 📊 Performance
+## Performance
 
 Based on the **HaluEval** benchmark (1,000 samples), CitationSleuth achieves:
 * **Accuracy:** 80.7%
@@ -96,7 +96,7 @@ Based on the **HaluEval** benchmark (1,000 samples), CitationSleuth achieves:
 
 ---
 
-## 👥 Authors
+## Authors
 
 **Presented By:**
 * Koushik Vasa
